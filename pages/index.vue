@@ -49,7 +49,7 @@ const products = ref([]);
 const shopper_range = ref([]);
 for (let i = 0; i < 100; i++) shopper_range.value[i] = 1;
 
-await axios.get('http://localhost:5400/products').then(response => {
+await axios.get('https://hackapi.aspire.su/login/products').then(response => {
     console.log(response.data)
     products.value = response.data;
 })

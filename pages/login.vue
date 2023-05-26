@@ -45,7 +45,7 @@ const auth = async () => {
         }
     };
 
-    axios.post('http://localhost:5400/login', qs.stringify({
+    axios.post('https://hackapi.aspire.su/login', qs.stringify({
         password: password.value,
         username: username.value
     }), config)
@@ -73,7 +73,7 @@ const register = async () => {
         }
     };
 
-    axios.post('http://localhost:5400/register', qs.stringify({
+    axios.post('https://hackapi.aspire.su/register', qs.stringify({
         password: password.value,
         username: username.value
     }), config)

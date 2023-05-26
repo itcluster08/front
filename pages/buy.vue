@@ -114,7 +114,7 @@ const providers = ref([{
 }])
 
 
-await axios.get('http://localhost:5400/products').then(response => {
+await axios.get('https://hackapi.aspire.su/products').then(response => {
     products.value = response.data;
 })
 
