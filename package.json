@@ -1,0 +1,24 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@types/node": "^18",
+    "nuxt": "^3.5.1"
+  },
+  "dependencies": {
+    "@aero/centra": "^1.0.8",
+    "@nuxtjs/tailwindcss": "^6.7.0",
+    "@sidebase/nuxt-session": "^0.2.7",
+    "@socials/centra": "github:profile-place/centra",
+    "axios": "^1.4.0",
+    "daisyui": "^2.51.6",
+    "qs": "^6.11.2"
+  }
+}
