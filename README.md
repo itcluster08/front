@@ -1,42 +1,54 @@
-# Nuxt 3 Minimal Starter
+# Лицевая часть сайта для фермерского кейса
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Папки
+### Layouts
+Содержат в себе оболочки вокруг конента на странице. Автоматически добавляет header и footer в каждую страницу
+### Pages
+Страницы на сайте, название файла соответствует пути на сайте
+### Public
+Публичные файлы для вывода на домене, например иконки и изображения
+### Server
+Мини-серверная часть, не используется в данном проекте в связи с отдельным API интерфейсом
 
-## Setup
+## Реализации
+### Регистрация
+Можно зарегестрировать пользователя. Минимум 6 символов для пароля. В поле почты можно ввести что угодно, завтра будем исправлять.
+### Логин
+Вход на сайт, позволяет использовать данные от регистрации для работы на сайте.
 
-Make sure to install the dependencies:
+![image](https://github.com/itcluster08/front/assets/63314911/c4d5cc6f-1c62-4101-8b48-5533ef1ac582)
 
-```bash
-# yarn
-yarn install
+### Страница продуктов
+Позволяет пользователю просмотреть ассортимент доступных продуктов и их сток, данные берутся из БАЗЫ ДАННЫХ, они не статичны.
 
-# npm
-npm install
+![image](https://github.com/itcluster08/front/assets/63314911/70b01890-6743-45a0-ac75-36afb4d454e1)
+![image](https://github.com/itcluster08/front/assets/63314911/842b938d-e906-4255-b7c9-b5eb68c3977e)
 
-# pnpm
-pnpm install
-```
+### Скидки за покупку оптом
+За массовые закупки пользователь получит скидку на продукт, которую увидит в корзине
 
-## Development Server
+![image](https://github.com/itcluster08/front/assets/63314911/2d53cfb3-f25b-4af5-af8c-68ee898891f3)
 
-Start the development server on `http://localhost:3000`
+### Корзина
+Позволяет посмотреть накопленные товары для последующей покупки. Если корзина имеет хотя бы один товар, на верхней навигации можно наблюдать красную иконку у пиктограммы тележки.
 
-```bash
-npm run dev
-```
+![image](https://github.com/itcluster08/front/assets/63314911/8a7421a7-a42f-4fab-b039-777a9fdc75fd)
 
-## Production
+### Оплата
+Оплата товаров (Это макет, на подключение кассы ушло бы много времени... и денег для тестов :)   )
 
-Build the application for production:
+![image](https://github.com/itcluster08/front/assets/63314911/0ac7ddd3-87fa-4dcb-b993-7da73bd72816)
 
-```bash
-npm run build
-```
+![image](https://github.com/itcluster08/front/assets/63314911/0c8387a0-cd21-41ee-80e9-c911c36a24d4)
 
-Locally preview production build:
+![image](https://github.com/itcluster08/front/assets/63314911/a078c320-f798-410f-8202-c462f6cdfe8e)
 
-```bash
-npm run preview
-```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+### Личный кабинет и кабинет фермера & Администратора [РАБОТА В ПРОЦЕССЕ]
+Время жмет не могу описывать подробно
+
+![image](https://github.com/itcluster08/front/assets/63314911/91e81bf3-8fc6-4957-964b-ebdac8eeb4d5)
+
+
+# Все остальное будет реализовано завтра.
