@@ -1,5 +1,5 @@
 <template>
-    <div class="container mx-auto">
+    <div class="container mx-auto px-4">
         <h1 class="text-4xl text-white font-bold">Ваша корзина</h1>
         <div class="loading" v-if="loading">
             <h1>ЗАГРУЗКА</h1>
@@ -7,14 +7,14 @@
 
         </div>
         <div v-else>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-20 mt-10" v-if="shopCard.length">
-                <div class="card card-compact w-96 bg-base-100 shadow-xl bg-gray-700" v-for="(item, index) in shopCard">
-                    <figure><img :src="products[index].image" class="w-full"/></figure>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-5 lg:gap-y-20 mt-10 justify-items-center lg:justify-items-start" v-if="shopCard.length">
+                <div class="card card-compact w-96 bg-base-100 shadow-md bg-gray-700" v-for="(item, index) in shopCard">
+                    <figure><img :src="products[item.id].image" class="w-full"/></figure>
                     <div class="card-body">
                         <div class="flex justify-between items-center">
                             <div class="card-title text-white flex items-center truncate">
                                 <div>
-                                    <h1 class="text-3xl">{{ products[index].name }}</h1>
+                                    <h1 class="text-3xl">{{ products[item.id].name }}</h1>
                                     <div class="rating rating-md">
                                         <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400"/>
                                         <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400"

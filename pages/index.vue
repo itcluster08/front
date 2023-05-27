@@ -1,8 +1,8 @@
 <template>
-    <div class="container mx-auto">
+    <div class="container mx-auto px-4">
         <h1 class="text-4xl">Магазин продуктов</h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-20 mt-10">
-            <div class="card card-compact w-96 bg-base-100 shadow-xl bg-gray-700" v-for="(product, index) in products">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-5 lg:gap-y-20 mt-10 justify-items-center lg:justify-items-start">
+            <div class="card card-compact w-96 bg-base-100 shadow-sm bg-gray-700" v-for="(product, index) in products">
                 <figure><img :src="product.image" class="w-full"/></figure>
                 <div class="card-body">
                     <div class="flex justify-between items-center">
@@ -39,11 +39,6 @@
 
 <script setup>
 import axios from "axios";
-
-const userId = useCookie('userId')
-if (!userId.value) {
-    navigateTo('/login')
-}
 
 const products = ref([]);
 const shopper_range = ref([]);

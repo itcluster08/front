@@ -15,10 +15,12 @@
   "dependencies": {
     "@aero/centra": "^1.0.8",
     "@nuxtjs/tailwindcss": "^6.7.0",
+    "@popperjs/core": "^2.11.8",
     "@sidebase/nuxt-session": "^0.2.7",
     "@socials/centra": "github:profile-place/centra",
     "axios": "^1.4.0",
     "daisyui": "^2.51.6",
-    "qs": "^6.11.2"
+    "qs": "^6.11.2",
+    "v-calendar": "^3.0.3"
   }
 }

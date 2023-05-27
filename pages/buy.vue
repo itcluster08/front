@@ -1,5 +1,5 @@
 <template>
-    <div class="container mx-auto">
+    <div class="container mx-auto px-4">
         <h1 class="text-4xl text-white font-bold">Оплата корзины</h1>
         <div class="loading" v-if="loading">
             <h1>ЗАГРУЗКА</h1>
@@ -10,7 +10,7 @@
             <h1 class="text-white text-xl">В вашей корзине {{shopCard.length}} продуктов на сумму {{shopCard.reduce((a, b) => a + calculatePrice(b.price, b.quantity)[0], 0)}}₽</h1>
             <div class="mt-12">
                 <h1 class="text-white text-4xl font-bold">Выберите способ оплаты</h1>
-                <div class="grid grid-cols-4 gap-4 mt-4">
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 mt-4">
                     <div class="flex flex-col bg-white border shadow-sm hover:shadow-2xl transition cursor-pointer rounded-xl border-4" v-for="(provider, index) in providers" :class="{'border-info': index === selectedProvider, 'border-white': index !== selectedProvider}" @click="selectedProvider = index">
                         <div class="p-4 flex items-center justify-between">
                             <h3 class="text-xl font-bold text-gray-800">
@@ -28,24 +28,24 @@
                 </ul>
 
                 <div class="form" v-if="selectedProvider && !confirm">
-                    <div class="grid grid-cols-3 gap-10 mt-4">
+                    <div class="grid grid-cols-2 lg:grid-cols-3 gap-10 mt-4">
                         <div class="form-control w-full">
-                            <h1 class="text-xl text-white">Номер карты</h1>
+                            <h1 class="text-xl text-white truncate">Номер карты</h1>
                             <input type="text" class="input input-bordered w-full mt-2" />
                         </div>
 
                         <div class="form-control w-full">
-                            <h1 class="text-xl text-white">Имя на карте</h1>
+                            <h1 class="text-xl text-white truncate">Имя на карте</h1>
                             <input type="text" name="name" class="input input-bordered w-full mt-2" />
                         </div>
 
                         <div class="form-control w-full">
-                            <h1 class="text-xl text-white">CVV КОД</h1>
+                            <h1 class="text-xl text-white truncate">CVV КОД</h1>
                             <input type="password" name="cvv" class="input input-bordered w-full mt-2" />
                         </div>
 
                         <div class="form-control w-full">
-                            <h1 class="text-xl text-white">Когда истекает</h1>
+                            <h1 class="text-xl text-white truncate">Когда истекает</h1>
                             <input type="month" name="expire" class="input input-bordered w-full mt-2" />
                         </div>
 
