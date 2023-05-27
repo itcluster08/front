@@ -102,7 +102,7 @@ const userId = useCookie('userId')
 const card = ref([]);
 const userData = ref({});
 
-await axios.get('https://hackapi.aspire.su/user?userId=' + userId.value).then(response => {
+if (userId.value) await axios.get('https://hackapi.aspire.su/user?userId=' + userId.value).then(response => {
     userData.value = response.data;
 })
 
